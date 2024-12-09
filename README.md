@@ -1,8 +1,8 @@
 # Smorgastarbord
 
 ## Authors
-Ian - Programmer
-Michael Quinn - Programmer
+Ian - Programmer <br />
+Michael Quinn - Programmer <br />
 Carolyn - Level Designer
 
 ## Description
