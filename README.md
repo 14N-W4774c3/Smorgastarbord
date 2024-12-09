@@ -13,4 +13,4 @@ Explore an **alien** world for ingredients in this ***brand*** new 3D platformin
 Created by `Mandy Gonzales`
 
 ### Low Poly Sylized Food Truck
-"Low Poly Stylized Food Truck" (https://skfb.ly/oISrz) by apesosa is licensed under Creative Commons Attribution-NonCommercial (http://creativecommons.org/licenses/by-nc/4.0/).
+"Low Poly Stylized Food Truck" (https://skfb.ly/oISrz) by `apesosa` is licensed under Creative Commons Attribution-NonCommercial (http://creativecommons.org/licenses/by-nc/4.0/).
