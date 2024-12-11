@@ -2,9 +2,12 @@ using UnityEngine;
 
 public class ActiveIngredient : MonoBehaviour
 {
-    public GameObject OrderSource;
-    public Material activeTexture;
-    public Material inactiveTexture;
+    [SerializeField]
+    private GameObject OrderSource;
+    [SerializeField]
+    private Material activeTexture;
+    [SerializeField]
+    private Material inactiveTexture;
     private MeshRenderer meshRenderer;
     private bool isRequested = false;
     private bool resetTexture = false;
