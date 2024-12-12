@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed;
     public float groundDrag;
     private bool is2D;
+    public bool IsMovingCheck = false;
 
     [Header("Jump")]
     public float jumpForce;
@@ -17,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     public float airMultiplier;
     bool readyToJump;
     private float jumpBoost = 1.0f;
+    public bool IsJumpingCheck = false;
 
     [Header("Ground Check")]
     public float playerHeight;
@@ -99,14 +101,18 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             verticalInput = Input.GetAxisRaw("Vertical");
-            Debug.Log(verticalInput);
-
+            if (IsJumpingCheck == true)
+            {
+                Debug.Log(verticalInput);
+            }
+            
         }
 
         horizontalInput = Input.GetAxisRaw("Horizontal");
-        Debug.Log(horizontalInput);
-
-
+        if (IsMovingCheck == true)
+        {
+            Debug.Log(horizontalInput);
+        }
 
         // when to jump
         if (Input.GetKey(jumpKey) && readyToJump && grounded)

@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 71245384}
   - component: {fileID: 71245383}
   - component: {fileID: 71245382}
+  - component: {fileID: 71245386}
   m_Layer: 0
   m_Name: NutPickup
   m_TagString: Untagged
@@ -229,6 +230,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1432906039}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &71245386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 71245381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f6127ba4076b41c7a706e654df6f46c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OrderSource: {fileID: 1293816515}
+  activeTexture: {fileID: 2100000, guid: eb9cff99396e04afc8f8d579908594e1, type: 2}
+  inactiveTexture: {fileID: 2100000, guid: 70f68b3c7f83f43c6b9c24b7e0591093, type: 2}
 --- !u!1 &127796164
 GameObject:
   m_ObjectHideFlags: 0
@@ -470,6 +486,7 @@ GameObject:
   - component: {fileID: 428491636}
   - component: {fileID: 428491635}
   - component: {fileID: 428491634}
+  - component: {fileID: 428491638}
   m_Layer: 0
   m_Name: CrystalPickup
   m_TagString: Untagged
@@ -565,6 +582,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 614627671}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &428491638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 428491633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f6127ba4076b41c7a706e654df6f46c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OrderSource: {fileID: 1293816515}
+  activeTexture: {fileID: 2100000, guid: eb9cff99396e04afc8f8d579908594e1, type: 2}
+  inactiveTexture: {fileID: 2100000, guid: 70f68b3c7f83f43c6b9c24b7e0591093, type: 2}
 --- !u!1001 &523130054
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -917,6 +949,7 @@ GameObject:
   - component: {fileID: 777380322}
   - component: {fileID: 777380321}
   - component: {fileID: 777380320}
+  - component: {fileID: 777380324}
   m_Layer: 0
   m_Name: MushroomPickup
   m_TagString: Untagged
@@ -1012,6 +1045,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &777380324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 777380319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f6127ba4076b41c7a706e654df6f46c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OrderSource: {fileID: 1293816515}
+  activeTexture: {fileID: 2100000, guid: eb9cff99396e04afc8f8d579908594e1, type: 2}
+  inactiveTexture: {fileID: 2100000, guid: 70f68b3c7f83f43c6b9c24b7e0591093, type: 2}
 --- !u!1001 &957884943
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1495,6 +1543,7 @@ GameObject:
   - component: {fileID: 1293816518}
   - component: {fileID: 1293816517}
   - component: {fileID: 1293816516}
+  - component: {fileID: 1293816523}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1516,9 +1565,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 7
   groundDrag: 1
+  IsMovingCheck: 0
   jumpForce: 7
   jumpCooldown: 0.5
   airMultiplier: 0.5
+  IsJumpingCheck: 0
   playerHeight: 0
   whatIsGround:
     serializedVersion: 2
@@ -1655,6 +1706,25 @@ Transform:
   - {fileID: 1225522502}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1293816523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293816515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 653f4d83f086c458db02cbf7c8d6e0c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentOrder: {fileID: 2075129794}
+  orderList:
+  - {fileID: 2075129794}
+  - {fileID: 777380319}
+  - {fileID: 428491633}
+  - {fileID: 71245381}
+  deliveryPoint: {fileID: 127796164}
 --- !u!1 &1343912432
 GameObject:
   m_ObjectHideFlags: 0
@@ -2044,6 +2114,7 @@ GameObject:
   - component: {fileID: 2075129797}
   - component: {fileID: 2075129796}
   - component: {fileID: 2075129795}
+  - component: {fileID: 2075129799}
   m_Layer: 0
   m_Name: BerryPickup
   m_TagString: Untagged
@@ -2139,6 +2210,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2075129799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2075129794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f6127ba4076b41c7a706e654df6f46c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OrderSource: {fileID: 1293816515}
+  activeTexture: {fileID: 2100000, guid: eb9cff99396e04afc8f8d579908594e1, type: 2}
+  inactiveTexture: {fileID: 2100000, guid: 70f68b3c7f83f43c6b9c24b7e0591093, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

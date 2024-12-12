@@ -27,4 +27,13 @@ public class OrderHandler : MonoBehaviour
             currentOrder = deliveryPoint;
         }
     }
+
+    public string GetOrder()
+    {
+        if (currentOrder != null)
+        {
+            return currentOrder.name;
+        }
+        return "No current order";
+    }
 }
