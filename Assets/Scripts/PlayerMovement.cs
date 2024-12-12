@@ -86,8 +86,7 @@ public class PlayerMovement : MonoBehaviour
         //Check respawn
         if (transform.position.y < -100)
         {
-            transform.position = respawnLocation;
-            resetOrientation();
+            respawn();
         }
     }
 
@@ -184,6 +183,11 @@ public class PlayerMovement : MonoBehaviour
                 }
                 rb.AddForce(transform.up * bv, ForceMode.Impulse);
             }
+
+            if (P.lethal)
+            {
+                respawn();
+            }
         }
     }
 
@@ -206,5 +210,12 @@ public class PlayerMovement : MonoBehaviour
     {
         orientation.eulerAngles = new Vector3(0f, 0f, 0f);
         tf.eulerAngles = new Vector3(0f, 0f, 0f);
+    }
+
+    public void respawn()
+    {
+        transform.position = respawnLocation;
+        resetOrientation();
+        rb.velocity = new Vector3(0.0f, 0.0f, 0.0f);
     }
 }

@@ -4,6 +4,7 @@ using UnityEngine;
 //Monobehavior script for storing different potential properties of platforms. All collision-based events are handled on the playermovement end.
 public class PlatformManager : MonoBehaviour
 {
+
     [Header("Bouncy Platforms")]
     public float bounciness;
 
@@ -12,6 +13,9 @@ public class PlatformManager : MonoBehaviour
     public float moveSpeed;
     private int backtracking = 1;
     private float offset = 0;
+
+    [Header("Hazards")]
+    public bool lethal;
 
     private void FixedUpdate()
     {
