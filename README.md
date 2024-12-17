@@ -1,10 +1,4 @@
 # Smorgastarbord
-
-## Authors
-Ian - `Programmer` <br />
-Michael Quinn - `Programmer` <br />
-Carolyn - `Level Designer`
-
 ## Authors
 Ian Wallace - `Programmer` <br />
 Michael Quinn - `Programmer` <br />
